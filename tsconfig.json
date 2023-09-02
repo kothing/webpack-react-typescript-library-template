@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "module": "esnext",
+    "target": "es5",
+    "noEmit": false,
+    "jsx": "react",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noImplicitThis": false,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["**/src/"],
+  "exclude": ["./node_modules", "./build", "./dist", "./lib", "./.vscode"]
+}
