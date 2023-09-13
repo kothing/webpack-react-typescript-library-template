@@ -68,15 +68,11 @@ const dev_config = {
   mode: "development",
   devtool: "inline-source-map",
   plugins: [
-    new HtmlWebpackPlugin(
-      Object.assign(
-        {},
-        {
-          inject: true,
-          template: "public/index.html",
-        },
-      ),
-    ),
+    new HtmlWebpackPlugin({
+      inject: true,
+      title: "Webpack React Typescript Library Template",
+      template: "public/index.html",
+    }),
     ...plugins(),
   ],
 };
@@ -90,29 +86,23 @@ const prod_config = {
     filename: "bundle.js",
   },
   plugins: [
-    new HtmlWebpackPlugin(
-      Object.assign(
-        {},
-        {
-          inject: true,
-          template: "public/index.html",
-        },
-        {
-          minify: {
-            removeComments: true,
-            collapseWhitespace: true,
-            removeRedundantAttributes: true,
-            useShortDoctype: true,
-            removeEmptyAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            keepClosingSlash: true,
-            minifyJS: true,
-            minifyCSS: true,
-            minifyURLs: true,
-          },
-        },
-      ),
-    ),
+    new HtmlWebpackPlugin({
+      inject: true,
+      title: "Webpack React Typescript Library Template",
+      template: "public/index.html",
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
+    }),
     ...plugins(),
   ],
 };
